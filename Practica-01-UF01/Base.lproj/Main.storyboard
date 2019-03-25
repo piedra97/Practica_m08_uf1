@@ -28,6 +28,9 @@
                                         <state key="normal" title="Equipos">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="f0y-jv-Rxn" kind="presentation" id="OKt-vi-oJr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqi-pm-8k0">
                                         <rect key="frame" x="0.0" y="69" width="105" height="48"/>
@@ -38,24 +41,19 @@
                                         </state>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="105" id="094-Eo-bVN"/>
-                                    <constraint firstAttribute="height" constant="117" id="ffO-yp-a6g"/>
-                                </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="gl_nbacourts_04.png" translatesAutoresizingMaskIntoConstraints="NO" id="gOv-O5-da0">
-                                <rect key="frame" x="13" y="31" width="349" height="214"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="214" id="02r-b3-Sdh"/>
-                                    <constraint firstAttribute="width" constant="349" id="IND-jB-Y44"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gl_nbacourts_04.png" translatesAutoresizingMaskIntoConstraints="NO" id="gOv-O5-da0">
+                                <rect key="frame" x="16" y="36" width="343" height="209"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gOv-O5-da0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pgc-aD-gWS"/>
-                            <constraint firstItem="s8F-Sf-uDl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="na8-dv-fjj"/>
-                            <constraint firstItem="s8F-Sf-uDl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qau-xn-XPw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gOv-O5-da0" secondAttribute="trailing" constant="16" id="4Ik-1W-15O"/>
+                            <constraint firstItem="s8F-Sf-uDl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8X8-0i-fhC"/>
+                            <constraint firstItem="gOv-O5-da0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EmU-Ae-KEa"/>
+                            <constraint firstItem="gOv-O5-da0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="F6x-yA-5lS"/>
+                            <constraint firstItem="s8F-Sf-uDl" firstAttribute="top" secondItem="gOv-O5-da0" secondAttribute="bottom" constant="30" id="RXR-pD-dV2"/>
+                            <constraint firstItem="s8F-Sf-uDl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m1Z-Mp-KFX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -67,7 +65,90 @@
                     <viewLayoutGuide key="safeArea" id="rAo-VA-ZJ1"/>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="79.200000000000003" y="120.08995502248877"/>
+            <point key="canvasLocation" x="-1729" y="161"/>
+        </scene>
+        <!--Detail Team View Controller-->
+        <scene sceneID="nMe-K8-KQi">
+            <objects>
+                <viewController id="rwb-Jx-r0v" customClass="DetailTeamViewController" customModule="Practica_01_UF01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RyZ-hB-vqt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSf-F5-rbU">
+                                <rect key="frame" x="295" y="26" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QAd-a9-Jcp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iuw-zr-gtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="493"/>
+        </scene>
+        <!--Equipos-->
+        <scene sceneID="TxY-wU-GPL">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="gLP-xb-XBs" customClass="ListOfTeamsTableViewController" customModule="Practica_01_UF01" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j8T-yh-oW8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gb8-CU-KAv">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gb8-CU-KAv" id="b92-fa-AL6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gLP-xb-XBs" id="Lwo-1l-qmf"/>
+                            <outlet property="delegate" destination="gLP-xb-XBs" id="ttJ-bW-p3n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Equipos" id="q0f-1D-Hch">
+                        <barButtonItem key="backBarButtonItem" title="Menu" id="9RB-ik-3rc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="hAc-HK-e7b"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HAa-8e-Iu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="-171"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="M7V-c3-fC6">
+            <objects>
+                <navigationController id="xZs-C2-lS6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YSi-i7-P32">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gLP-xb-XBs" kind="relationship" relationship="rootViewController" id="1C1-tZ-RVJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVR-gJ-q9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="-171"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="xNw-Nb-173">
+            <objects>
+                <splitViewController id="f0y-jv-Rxn" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="xZs-C2-lS6" kind="relationship" relationship="masterViewController" id="Dc8-pJ-cEv"/>
+                        <segue destination="rwb-Jx-r0v" kind="relationship" relationship="detailViewController" id="SnN-jH-Ph7"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tiu-uf-H52" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-951" y="161"/>
         </scene>
     </scenes>
     <resources>

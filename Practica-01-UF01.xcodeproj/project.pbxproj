@@ -14,6 +14,8 @@
 		EF6BA7112243EB8500B51A73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6BA70F2243EB8500B51A73 /* LaunchScreen.storyboard */; };
 		EF6BA7192243EE9E00B51A73 /* kareem_abdul_jabar.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6BA7182243EE9E00B51A73 /* kareem_abdul_jabar.png */; };
 		EF6BA71B2243FC5A00B51A73 /* gl_nbacourts_04.png in Resources */ = {isa = PBXBuildFile; fileRef = EF6BA71A2243FC5A00B51A73 /* gl_nbacourts_04.png */; };
+		EFA6BCE722493617005F3C2E /* ListOfTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6BCE622493617005F3C2E /* ListOfTeamsTableViewController.swift */; };
+		EFA6BCEB224937AA005F3C2E /* DetailTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6BCEA224937AA005F3C2E /* DetailTeamViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EF6BA7122243EB8500B51A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF6BA7182243EE9E00B51A73 /* kareem_abdul_jabar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kareem_abdul_jabar.png; sourceTree = "<group>"; };
 		EF6BA71A2243FC5A00B51A73 /* gl_nbacourts_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gl_nbacourts_04.png; sourceTree = "<group>"; };
+		EFA6BCE622493617005F3C2E /* ListOfTeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTeamsTableViewController.swift; sourceTree = "<group>"; };
+		EFA6BCEA224937AA005F3C2E /* DetailTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTeamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */,
 				EF6BA7082243EB7F00B51A73 /* ViewController.swift */,
 				EF6BA70A2243EB7F00B51A73 /* Main.storyboard */,
+				EFA6BCEA224937AA005F3C2E /* DetailTeamViewController.swift */,
+				EFA6BCE622493617005F3C2E /* ListOfTeamsTableViewController.swift */,
 				EF6BA70D2243EB8500B51A73 /* Assets.xcassets */,
 				EF6BA70F2243EB8500B51A73 /* LaunchScreen.storyboard */,
 				EF6BA7122243EB8500B51A73 /* Info.plist */,
@@ -144,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6BA7092243EB7F00B51A73 /* ViewController.swift in Sources */,
+				EFA6BCE722493617005F3C2E /* ListOfTeamsTableViewController.swift in Sources */,
+				EFA6BCEB224937AA005F3C2E /* DetailTeamViewController.swift in Sources */,
 				EF6BA7072243EB7F00B51A73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
