@@ -114,10 +114,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Equipos" id="q0f-1D-Hch">
                         <barButtonItem key="backBarButtonItem" title="Menu" id="9RB-ik-3rc"/>
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="hAc-HK-e7b"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="hAc-HK-e7b">
+                            <connections>
+                                <action selector="goBack:" destination="0sp-UL-cTx" id="g77-TX-5Of"/>
+                                <segue destination="0sp-UL-cTx" kind="unwind" identifier="Go to Menu in DTWC" unwindAction="goBackWithSegue:" id="2CL-On-qTg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAa-8e-Iu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0sp-UL-cTx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="890" y="-171"/>
         </scene>
