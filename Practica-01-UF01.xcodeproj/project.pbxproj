@@ -9,6 +9,42 @@
 /* Begin PBXBuildFile section */
 		EF2B2E31224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E30224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift */; };
 		EF2B2E33224D0FC900DC32CF /* DetailMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E32224D0FC900DC32CF /* DetailMatchViewController.swift */; };
+		EF2B2E36224D281200DC32CF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2B2E35224D281200DC32CF /* libsqlite3.tbd */; };
+		EF2B2E43224D28C500DC32CF /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E3A224D28C400DC32CF /* FMDatabaseAdditions.m */; };
+		EF2B2E44224D28C500DC32CF /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E3B224D28C500DC32CF /* FMDatabasePool.m */; };
+		EF2B2E45224D28C500DC32CF /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E3C224D28C500DC32CF /* FMDatabase.m */; };
+		EF2B2E46224D28C500DC32CF /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E3E224D28C500DC32CF /* FMResultSet.m */; };
+		EF2B2E47224D28C500DC32CF /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E40224D28C500DC32CF /* FMDatabaseQueue.m */; };
+		EF2B2E68224D305500DC32CF /* thunder.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E4A224D305100DC32CF /* thunder.png */; };
+		EF2B2E69224D305500DC32CF /* blazers.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E4B224D305100DC32CF /* blazers.png */; };
+		EF2B2E6A224D305500DC32CF /* clippers.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E4C224D305100DC32CF /* clippers.png */; };
+		EF2B2E6B224D305500DC32CF /* 76ers.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E4D224D305100DC32CF /* 76ers.png */; };
+		EF2B2E6C224D305500DC32CF /* pacers.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E4E224D305200DC32CF /* pacers.png */; };
+		EF2B2E6D224D305500DC32CF /* spurs.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E4F224D305200DC32CF /* spurs.png */; };
+		EF2B2E6E224D305500DC32CF /* magic.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E50224D305200DC32CF /* magic.png */; };
+		EF2B2E6F224D305500DC32CF /* bucks.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E51224D305200DC32CF /* bucks.png */; };
+		EF2B2E70224D305500DC32CF /* rockets.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E52224D305200DC32CF /* rockets.png */; };
+		EF2B2E71224D305500DC32CF /* denver.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E53224D305200DC32CF /* denver.png */; };
+		EF2B2E72224D305500DC32CF /* jazz.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E54224D305200DC32CF /* jazz.png */; };
+		EF2B2E73224D305500DC32CF /* kings.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E55224D305200DC32CF /* kings.png */; };
+		EF2B2E74224D305500DC32CF /* timberwolves.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E56224D305300DC32CF /* timberwolves.png */; };
+		EF2B2E75224D305500DC32CF /* pelicans.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E57224D305300DC32CF /* pelicans.png */; };
+		EF2B2E76224D305500DC32CF /* hornets.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E58224D305300DC32CF /* hornets.png */; };
+		EF2B2E77224D305500DC32CF /* nets.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E59224D305300DC32CF /* nets.png */; };
+		EF2B2E78224D305500DC32CF /* raptors.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E5A224D305300DC32CF /* raptors.png */; };
+		EF2B2E79224D305500DC32CF /* suns.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E5B224D305300DC32CF /* suns.png */; };
+		EF2B2E7A224D305500DC32CF /* celtics.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E5C224D305300DC32CF /* celtics.png */; };
+		EF2B2E7B224D305500DC32CF /* wizards.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E5D224D305300DC32CF /* wizards.png */; };
+		EF2B2E7C224D305500DC32CF /* cavs.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E5E224D305400DC32CF /* cavs.png */; };
+		EF2B2E7D224D305500DC32CF /* hawks.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E5F224D305400DC32CF /* hawks.png */; };
+		EF2B2E7E224D305500DC32CF /* knicks.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E60224D305400DC32CF /* knicks.png */; };
+		EF2B2E7F224D305500DC32CF /* heat.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E61224D305400DC32CF /* heat.png */; };
+		EF2B2E80224D305500DC32CF /* lakers.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E62224D305400DC32CF /* lakers.png */; };
+		EF2B2E81224D305500DC32CF /* bulls.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E63224D305400DC32CF /* bulls.png */; };
+		EF2B2E82224D305500DC32CF /* pistons.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E64224D305400DC32CF /* pistons.png */; };
+		EF2B2E83224D305500DC32CF /* warriors.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E65224D305400DC32CF /* warriors.png */; };
+		EF2B2E84224D305500DC32CF /* grizzlies.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E66224D305500DC32CF /* grizzlies.png */; };
+		EF2B2E85224D305500DC32CF /* mavericks.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E67224D305500DC32CF /* mavericks.png */; };
 		EF6BA7072243EB7F00B51A73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */; };
 		EF6BA7092243EB7F00B51A73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6BA7082243EB7F00B51A73 /* ViewController.swift */; };
 		EF6BA70C2243EB7F00B51A73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6BA70A2243EB7F00B51A73 /* Main.storyboard */; };
@@ -23,6 +59,49 @@
 /* Begin PBXFileReference section */
 		EF2B2E30224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMatchesTableViewController.swift; sourceTree = "<group>"; };
 		EF2B2E32224D0FC900DC32CF /* DetailMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMatchViewController.swift; sourceTree = "<group>"; };
+		EF2B2E35224D281200DC32CF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		EF2B2E37224D28C400DC32CF /* Practica-01-UF01-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Practica-01-UF01-Bridging-Header.h"; sourceTree = "<group>"; };
+		EF2B2E38224D28C400DC32CF /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		EF2B2E39224D28C400DC32CF /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		EF2B2E3A224D28C400DC32CF /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		EF2B2E3B224D28C500DC32CF /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		EF2B2E3C224D28C500DC32CF /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		EF2B2E3D224D28C500DC32CF /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		EF2B2E3E224D28C500DC32CF /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		EF2B2E3F224D28C500DC32CF /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		EF2B2E40224D28C500DC32CF /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		EF2B2E41224D28C500DC32CF /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		EF2B2E42224D28C500DC32CF /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		EF2B2E4A224D305100DC32CF /* thunder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thunder.png; sourceTree = "<group>"; };
+		EF2B2E4B224D305100DC32CF /* blazers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blazers.png; sourceTree = "<group>"; };
+		EF2B2E4C224D305100DC32CF /* clippers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clippers.png; sourceTree = "<group>"; };
+		EF2B2E4D224D305100DC32CF /* 76ers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 76ers.png; sourceTree = "<group>"; };
+		EF2B2E4E224D305200DC32CF /* pacers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pacers.png; sourceTree = "<group>"; };
+		EF2B2E4F224D305200DC32CF /* spurs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spurs.png; sourceTree = "<group>"; };
+		EF2B2E50224D305200DC32CF /* magic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magic.png; sourceTree = "<group>"; };
+		EF2B2E51224D305200DC32CF /* bucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bucks.png; sourceTree = "<group>"; };
+		EF2B2E52224D305200DC32CF /* rockets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rockets.png; sourceTree = "<group>"; };
+		EF2B2E53224D305200DC32CF /* denver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = denver.png; sourceTree = "<group>"; };
+		EF2B2E54224D305200DC32CF /* jazz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jazz.png; sourceTree = "<group>"; };
+		EF2B2E55224D305200DC32CF /* kings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kings.png; sourceTree = "<group>"; };
+		EF2B2E56224D305300DC32CF /* timberwolves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timberwolves.png; sourceTree = "<group>"; };
+		EF2B2E57224D305300DC32CF /* pelicans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pelicans.png; sourceTree = "<group>"; };
+		EF2B2E58224D305300DC32CF /* hornets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hornets.png; sourceTree = "<group>"; };
+		EF2B2E59224D305300DC32CF /* nets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nets.png; sourceTree = "<group>"; };
+		EF2B2E5A224D305300DC32CF /* raptors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = raptors.png; sourceTree = "<group>"; };
+		EF2B2E5B224D305300DC32CF /* suns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suns.png; sourceTree = "<group>"; };
+		EF2B2E5C224D305300DC32CF /* celtics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = celtics.png; sourceTree = "<group>"; };
+		EF2B2E5D224D305300DC32CF /* wizards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wizards.png; sourceTree = "<group>"; };
+		EF2B2E5E224D305400DC32CF /* cavs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cavs.png; sourceTree = "<group>"; };
+		EF2B2E5F224D305400DC32CF /* hawks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hawks.png; sourceTree = "<group>"; };
+		EF2B2E60224D305400DC32CF /* knicks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knicks.png; sourceTree = "<group>"; };
+		EF2B2E61224D305400DC32CF /* heat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heat.png; sourceTree = "<group>"; };
+		EF2B2E62224D305400DC32CF /* lakers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lakers.png; sourceTree = "<group>"; };
+		EF2B2E63224D305400DC32CF /* bulls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bulls.png; sourceTree = "<group>"; };
+		EF2B2E64224D305400DC32CF /* pistons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pistons.png; sourceTree = "<group>"; };
+		EF2B2E65224D305400DC32CF /* warriors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warriors.png; sourceTree = "<group>"; };
+		EF2B2E66224D305500DC32CF /* grizzlies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grizzlies.png; sourceTree = "<group>"; };
+		EF2B2E67224D305500DC32CF /* mavericks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mavericks.png; sourceTree = "<group>"; };
 		EF6BA7032243EB7F00B51A73 /* Practica-01-UF01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Practica-01-UF01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF6BA7082243EB7F00B51A73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,17 +120,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2B2E36224D281200DC32CF /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF2B2E34224D281200DC32CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B2E35224D281200DC32CF /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF2B2E48224D28E100DC32CF /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B2E3D224D28C500DC32CF /* FMDatabase.h */,
+				EF2B2E3C224D28C500DC32CF /* FMDatabase.m */,
+				EF2B2E42224D28C500DC32CF /* FMDatabaseAdditions.h */,
+				EF2B2E3A224D28C400DC32CF /* FMDatabaseAdditions.m */,
+				EF2B2E41224D28C500DC32CF /* FMDatabasePool.h */,
+				EF2B2E3B224D28C500DC32CF /* FMDatabasePool.m */,
+				EF2B2E3F224D28C500DC32CF /* FMDatabaseQueue.h */,
+				EF2B2E40224D28C500DC32CF /* FMDatabaseQueue.m */,
+				EF2B2E38224D28C400DC32CF /* FMDB.h */,
+				EF2B2E39224D28C400DC32CF /* FMResultSet.h */,
+				EF2B2E3E224D28C500DC32CF /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		EF2B2E49224D302E00DC32CF /* NBALogos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NBALogos;
+			sourceTree = "<group>";
+		};
 		EF6BA6FA2243EB7F00B51A73 = {
 			isa = PBXGroup;
 			children = (
 				EF6BA7052243EB7F00B51A73 /* Practica-01-UF01 */,
 				EF6BA7042243EB7F00B51A73 /* Products */,
+				EF2B2E34224D281200DC32CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +180,38 @@
 		EF6BA7052243EB7F00B51A73 /* Practica-01-UF01 */ = {
 			isa = PBXGroup;
 			children = (
+				EF2B2E4D224D305100DC32CF /* 76ers.png */,
+				EF2B2E4B224D305100DC32CF /* blazers.png */,
+				EF2B2E51224D305200DC32CF /* bucks.png */,
+				EF2B2E63224D305400DC32CF /* bulls.png */,
+				EF2B2E5E224D305400DC32CF /* cavs.png */,
+				EF2B2E5C224D305300DC32CF /* celtics.png */,
+				EF2B2E4C224D305100DC32CF /* clippers.png */,
+				EF2B2E53224D305200DC32CF /* denver.png */,
+				EF2B2E66224D305500DC32CF /* grizzlies.png */,
+				EF2B2E5F224D305400DC32CF /* hawks.png */,
+				EF2B2E61224D305400DC32CF /* heat.png */,
+				EF2B2E58224D305300DC32CF /* hornets.png */,
+				EF2B2E54224D305200DC32CF /* jazz.png */,
+				EF2B2E55224D305200DC32CF /* kings.png */,
+				EF2B2E60224D305400DC32CF /* knicks.png */,
+				EF2B2E62224D305400DC32CF /* lakers.png */,
+				EF2B2E50224D305200DC32CF /* magic.png */,
+				EF2B2E67224D305500DC32CF /* mavericks.png */,
+				EF2B2E59224D305300DC32CF /* nets.png */,
+				EF2B2E4E224D305200DC32CF /* pacers.png */,
+				EF2B2E57224D305300DC32CF /* pelicans.png */,
+				EF2B2E64224D305400DC32CF /* pistons.png */,
+				EF2B2E5A224D305300DC32CF /* raptors.png */,
+				EF2B2E52224D305200DC32CF /* rockets.png */,
+				EF2B2E4F224D305200DC32CF /* spurs.png */,
+				EF2B2E5B224D305300DC32CF /* suns.png */,
+				EF2B2E4A224D305100DC32CF /* thunder.png */,
+				EF2B2E56224D305300DC32CF /* timberwolves.png */,
+				EF2B2E65224D305400DC32CF /* warriors.png */,
+				EF2B2E5D224D305300DC32CF /* wizards.png */,
+				EF2B2E49224D302E00DC32CF /* NBALogos */,
+				EF2B2E48224D28E100DC32CF /* fmdb */,
 				EF6BA7182243EE9E00B51A73 /* kareem_abdul_jabar.png */,
 				EF6BA71A2243FC5A00B51A73 /* gl_nbacourts_04.png */,
 				EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */,
@@ -78,6 +224,7 @@
 				EF6BA70D2243EB8500B51A73 /* Assets.xcassets */,
 				EF6BA70F2243EB8500B51A73 /* LaunchScreen.storyboard */,
 				EF6BA7122243EB8500B51A73 /* Info.plist */,
+				EF2B2E37224D28C400DC32CF /* Practica-01-UF01-Bridging-Header.h */,
 			);
 			path = "Practica-01-UF01";
 			sourceTree = "<group>";
@@ -114,6 +261,7 @@
 				TargetAttributes = {
 					EF6BA7022243EB7F00B51A73 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -141,10 +289,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6BA7192243EE9E00B51A73 /* kareem_abdul_jabar.png in Resources */,
+				EF2B2E80224D305500DC32CF /* lakers.png in Resources */,
+				EF2B2E78224D305500DC32CF /* raptors.png in Resources */,
+				EF2B2E84224D305500DC32CF /* grizzlies.png in Resources */,
+				EF2B2E6C224D305500DC32CF /* pacers.png in Resources */,
+				EF2B2E75224D305500DC32CF /* pelicans.png in Resources */,
+				EF2B2E6A224D305500DC32CF /* clippers.png in Resources */,
 				EF6BA7112243EB8500B51A73 /* LaunchScreen.storyboard in Resources */,
+				EF2B2E76224D305500DC32CF /* hornets.png in Resources */,
+				EF2B2E81224D305500DC32CF /* bulls.png in Resources */,
+				EF2B2E69224D305500DC32CF /* blazers.png in Resources */,
+				EF2B2E70224D305500DC32CF /* rockets.png in Resources */,
+				EF2B2E74224D305500DC32CF /* timberwolves.png in Resources */,
+				EF2B2E7B224D305500DC32CF /* wizards.png in Resources */,
+				EF2B2E68224D305500DC32CF /* thunder.png in Resources */,
+				EF2B2E82224D305500DC32CF /* pistons.png in Resources */,
+				EF2B2E83224D305500DC32CF /* warriors.png in Resources */,
+				EF2B2E79224D305500DC32CF /* suns.png in Resources */,
+				EF2B2E85224D305500DC32CF /* mavericks.png in Resources */,
+				EF2B2E6B224D305500DC32CF /* 76ers.png in Resources */,
+				EF2B2E7A224D305500DC32CF /* celtics.png in Resources */,
+				EF2B2E71224D305500DC32CF /* denver.png in Resources */,
+				EF2B2E7E224D305500DC32CF /* knicks.png in Resources */,
+				EF2B2E7C224D305500DC32CF /* cavs.png in Resources */,
+				EF2B2E7F224D305500DC32CF /* heat.png in Resources */,
+				EF2B2E6D224D305500DC32CF /* spurs.png in Resources */,
+				EF2B2E72224D305500DC32CF /* jazz.png in Resources */,
+				EF2B2E77224D305500DC32CF /* nets.png in Resources */,
+				EF2B2E6F224D305500DC32CF /* bucks.png in Resources */,
 				EF6BA71B2243FC5A00B51A73 /* gl_nbacourts_04.png in Resources */,
+				EF2B2E73224D305500DC32CF /* kings.png in Resources */,
+				EF2B2E6E224D305500DC32CF /* magic.png in Resources */,
 				EF6BA70E2243EB8500B51A73 /* Assets.xcassets in Resources */,
 				EF6BA70C2243EB7F00B51A73 /* Main.storyboard in Resources */,
+				EF2B2E7D224D305500DC32CF /* hawks.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,8 +336,13 @@
 				EF6BA7092243EB7F00B51A73 /* ViewController.swift in Sources */,
 				EF2B2E31224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift in Sources */,
 				EFA6BCE722493617005F3C2E /* ListOfTeamsTableViewController.swift in Sources */,
+				EF2B2E45224D28C500DC32CF /* FMDatabase.m in Sources */,
+				EF2B2E46224D28C500DC32CF /* FMResultSet.m in Sources */,
 				EF2B2E33224D0FC900DC32CF /* DetailMatchViewController.swift in Sources */,
 				EFA6BCEB224937AA005F3C2E /* DetailTeamViewController.swift in Sources */,
+				EF2B2E44224D28C500DC32CF /* FMDatabasePool.m in Sources */,
+				EF2B2E47224D28C500DC32CF /* FMDatabaseQueue.m in Sources */,
+				EF2B2E43224D28C500DC32CF /* FMDatabaseAdditions.m in Sources */,
 				EF6BA7072243EB7F00B51A73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +489,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Practica-01-UF01/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -314,6 +498,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Pol-Joel.Practica-01-UF01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Practica-01-UF01/Practica-01-UF01-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Practica-01-UF01/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -331,6 +518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Pol-Joel.Practica-01-UF01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Practica-01-UF01/Practica-01-UF01-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
