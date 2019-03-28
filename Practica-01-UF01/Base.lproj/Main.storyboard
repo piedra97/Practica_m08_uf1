@@ -39,6 +39,9 @@
                                         <state key="normal" title="Partidos">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="21A-Mc-Vpm" kind="presentation" id="BHu-i7-L9l"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -87,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuw-zr-gtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="493"/>
+            <point key="canvasLocation" x="20" y="509"/>
         </scene>
         <!--Equipos-->
         <scene sceneID="TxY-wU-GPL">
@@ -155,6 +158,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiu-uf-H52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-951" y="161"/>
+        </scene>
+        <!--Detail Match View Controller-->
+        <scene sceneID="lGC-Ju-SJQ">
+            <objects>
+                <viewController id="PND-Bb-E2K" customClass="DetailMatchViewController" customModule="Practica_01_UF01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XTI-mM-peC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jX4-Qk-IUe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3G-As-GBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-892" y="1871"/>
+        </scene>
+        <!--Partidos-->
+        <scene sceneID="WoF-Bi-dOu">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Ypv-Vp-PSi" customClass="ListOfMatchesTableViewController" customModule="Practica_01_UF01" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="F2v-Ro-1f8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ebR-Up-ASl">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ebR-Up-ASl" id="tF4-aZ-MLi">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ypv-Vp-PSi" id="cjd-7D-BHm"/>
+                            <outlet property="delegate" destination="Ypv-Vp-PSi" id="mAa-ox-pym"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Partidos" id="mfP-p5-940">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="fa8-y0-EdL">
+                            <connections>
+                                <segue destination="CvM-oN-k3U" kind="unwind" unwindAction="goBackWithSegue:" id="f3T-hk-p8K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZK-u0-LAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="CvM-oN-k3U" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="1228"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hjU-iY-z5M">
+            <objects>
+                <navigationController id="m7j-Sl-c6B" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p53-xA-aCf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ypv-Vp-PSi" kind="relationship" relationship="rootViewController" id="neT-9q-iyB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkO-Vy-D5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-892" y="1162"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="f8k-ZB-eTo">
+            <objects>
+                <splitViewController id="21A-Mc-Vpm" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="m7j-Sl-c6B" kind="relationship" relationship="masterViewController" id="GKC-6E-KXl"/>
+                        <segue destination="PND-Bb-E2K" kind="relationship" relationship="detailViewController" id="6aU-Z5-kFz"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lwl-NA-AfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1793" y="1452"/>
         </scene>
     </scenes>
     <resources>

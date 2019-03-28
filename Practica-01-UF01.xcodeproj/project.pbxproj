@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF2B2E31224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E30224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift */; };
+		EF2B2E33224D0FC900DC32CF /* DetailMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E32224D0FC900DC32CF /* DetailMatchViewController.swift */; };
 		EF6BA7072243EB7F00B51A73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */; };
 		EF6BA7092243EB7F00B51A73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6BA7082243EB7F00B51A73 /* ViewController.swift */; };
 		EF6BA70C2243EB7F00B51A73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6BA70A2243EB7F00B51A73 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF2B2E30224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMatchesTableViewController.swift; sourceTree = "<group>"; };
+		EF2B2E32224D0FC900DC32CF /* DetailMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMatchViewController.swift; sourceTree = "<group>"; };
 		EF6BA7032243EB7F00B51A73 /* Practica-01-UF01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Practica-01-UF01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF6BA7082243EB7F00B51A73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				EF6BA70A2243EB7F00B51A73 /* Main.storyboard */,
 				EFA6BCEA224937AA005F3C2E /* DetailTeamViewController.swift */,
 				EFA6BCE622493617005F3C2E /* ListOfTeamsTableViewController.swift */,
+				EF2B2E30224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift */,
+				EF2B2E32224D0FC900DC32CF /* DetailMatchViewController.swift */,
 				EF6BA70D2243EB8500B51A73 /* Assets.xcassets */,
 				EF6BA70F2243EB8500B51A73 /* LaunchScreen.storyboard */,
 				EF6BA7122243EB8500B51A73 /* Info.plist */,
@@ -150,7 +156,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF6BA7092243EB7F00B51A73 /* ViewController.swift in Sources */,
+				EF2B2E31224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift in Sources */,
 				EFA6BCE722493617005F3C2E /* ListOfTeamsTableViewController.swift in Sources */,
+				EF2B2E33224D0FC900DC32CF /* DetailMatchViewController.swift in Sources */,
 				EFA6BCEB224937AA005F3C2E /* DetailTeamViewController.swift in Sources */,
 				EF6BA7072243EB7F00B51A73 /* AppDelegate.swift in Sources */,
 			);
