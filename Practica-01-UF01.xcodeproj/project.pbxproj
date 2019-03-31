@@ -127,59 +127,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF2B2E34224D281200DC32CF /* Frameworks */ = {
+		0077AC412250C9290017B4FB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				EF2B2E35224D281200DC32CF /* libsqlite3.tbd */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EF2B2E48224D28E100DC32CF /* fmdb */ = {
-			isa = PBXGroup;
-			children = (
-				EF2B2E3D224D28C500DC32CF /* FMDatabase.h */,
-				EF2B2E3C224D28C500DC32CF /* FMDatabase.m */,
-				EF2B2E42224D28C500DC32CF /* FMDatabaseAdditions.h */,
-				EF2B2E3A224D28C400DC32CF /* FMDatabaseAdditions.m */,
-				EF2B2E41224D28C500DC32CF /* FMDatabasePool.h */,
-				EF2B2E3B224D28C500DC32CF /* FMDatabasePool.m */,
-				EF2B2E3F224D28C500DC32CF /* FMDatabaseQueue.h */,
-				EF2B2E40224D28C500DC32CF /* FMDatabaseQueue.m */,
-				EF2B2E38224D28C400DC32CF /* FMDB.h */,
-				EF2B2E39224D28C400DC32CF /* FMResultSet.h */,
-				EF2B2E3E224D28C500DC32CF /* FMResultSet.m */,
-			);
-			path = fmdb;
-			sourceTree = "<group>";
-		};
-		EF2B2E49224D302E00DC32CF /* NBALogos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NBALogos;
-			sourceTree = "<group>";
-		};
-		EF6BA6FA2243EB7F00B51A73 = {
-			isa = PBXGroup;
-			children = (
-				EF6BA7052243EB7F00B51A73 /* Practica-01-UF01 */,
-				EF6BA7042243EB7F00B51A73 /* Products */,
-				EF2B2E34224D281200DC32CF /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		EF6BA7042243EB7F00B51A73 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EF6BA7032243EB7F00B51A73 /* Practica-01-UF01.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EF6BA7052243EB7F00B51A73 /* Practica-01-UF01 */ = {
-			isa = PBXGroup;
-			children = (
+				EF6BA7182243EE9E00B51A73 /* kareem_abdul_jabar.png */,
+				EF6BA71A2243FC5A00B51A73 /* gl_nbacourts_04.png */,
 				EF2B2E4D224D305100DC32CF /* 76ers.png */,
 				EF2B2E4B224D305100DC32CF /* blazers.png */,
 				EF2B2E51224D305200DC32CF /* bucks.png */,
@@ -210,10 +162,58 @@
 				EF2B2E56224D305300DC32CF /* timberwolves.png */,
 				EF2B2E65224D305400DC32CF /* warriors.png */,
 				EF2B2E5D224D305300DC32CF /* wizards.png */,
-				EF2B2E49224D302E00DC32CF /* NBALogos */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		EF2B2E34224D281200DC32CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B2E35224D281200DC32CF /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF2B2E48224D28E100DC32CF /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				EF2B2E3D224D28C500DC32CF /* FMDatabase.h */,
+				EF2B2E3C224D28C500DC32CF /* FMDatabase.m */,
+				EF2B2E42224D28C500DC32CF /* FMDatabaseAdditions.h */,
+				EF2B2E3A224D28C400DC32CF /* FMDatabaseAdditions.m */,
+				EF2B2E41224D28C500DC32CF /* FMDatabasePool.h */,
+				EF2B2E3B224D28C500DC32CF /* FMDatabasePool.m */,
+				EF2B2E3F224D28C500DC32CF /* FMDatabaseQueue.h */,
+				EF2B2E40224D28C500DC32CF /* FMDatabaseQueue.m */,
+				EF2B2E38224D28C400DC32CF /* FMDB.h */,
+				EF2B2E39224D28C400DC32CF /* FMResultSet.h */,
+				EF2B2E3E224D28C500DC32CF /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		EF6BA6FA2243EB7F00B51A73 = {
+			isa = PBXGroup;
+			children = (
+				EF6BA7052243EB7F00B51A73 /* Practica-01-UF01 */,
+				EF6BA7042243EB7F00B51A73 /* Products */,
+				EF2B2E34224D281200DC32CF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF6BA7042243EB7F00B51A73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF6BA7032243EB7F00B51A73 /* Practica-01-UF01.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF6BA7052243EB7F00B51A73 /* Practica-01-UF01 */ = {
+			isa = PBXGroup;
+			children = (
+				0077AC412250C9290017B4FB /* Images */,
 				EF2B2E48224D28E100DC32CF /* fmdb */,
-				EF6BA7182243EE9E00B51A73 /* kareem_abdul_jabar.png */,
-				EF6BA71A2243FC5A00B51A73 /* gl_nbacourts_04.png */,
 				EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */,
 				EF6BA7082243EB7F00B51A73 /* ViewController.swift */,
 				EF6BA70A2243EB7F00B51A73 /* Main.storyboard */,
