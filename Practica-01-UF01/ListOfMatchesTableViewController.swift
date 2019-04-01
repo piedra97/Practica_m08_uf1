@@ -48,6 +48,10 @@ class ListOfMatchesTableViewController: UITableViewController, UISplitViewContro
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    
+    @IBAction func goBack(segue : UIStoryboardSegue) {
+        
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

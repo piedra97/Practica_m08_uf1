@@ -157,7 +157,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiu-uf-H52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-951" y="161"/>
+            <point key="canvasLocation" x="-914" y="161"/>
         </scene>
         <!--Detail Match View Controller-->
         <scene sceneID="lGC-Ju-SJQ">
@@ -203,12 +203,80 @@
                                 <segue destination="CvM-oN-k3U" kind="unwind" unwindAction="goBackWithSegue:" id="f3T-hk-p8K"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uOn-XD-JYM">
+                            <connections>
+                                <segue destination="bly-aR-LmX" kind="presentation" id="Vsw-FT-Twj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZK-u0-LAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="CvM-oN-k3U" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="295" y="1228"/>
+            <point key="canvasLocation" x="20" y="1162"/>
+        </scene>
+        <!--Inserta Partido-->
+        <scene sceneID="XLp-F3-cNL">
+            <objects>
+                <viewController id="f9K-AK-hO7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x87-JJ-6dQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YLf-9s-FSB">
+                                <rect key="frame" x="27.5" y="37.5" width="320" height="592.5"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQc-OY-c64">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                    </pickerView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfQ-VC-6MO">
+                                        <rect key="frame" x="147.5" y="236" width="25" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eo5-8a-952">
+                                        <rect key="frame" x="149.5" y="286" width="21.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nuD-7O-r1R">
+                                        <rect key="frame" x="0.0" y="326.5" width="320" height="216"/>
+                                    </pickerView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBr-nm-Piw">
+                                        <rect key="frame" x="147.5" y="562.5" width="25" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YLf-9s-FSB" firstAttribute="centerY" secondItem="x87-JJ-6dQ" secondAttribute="centerY" id="Htf-oU-dTU"/>
+                            <constraint firstItem="YLf-9s-FSB" firstAttribute="centerX" secondItem="x87-JJ-6dQ" secondAttribute="centerX" id="h2K-42-o1v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BQY-cL-3IV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inserta Partido" id="MBt-z9-oNH">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jXM-cc-xgy">
+                            <connections>
+                                <segue destination="cp6-1z-JR4" kind="unwind" identifier="Save to TableView" unwindAction="goBackWithSegue:" id="vTW-dj-JVz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="Rpq-mL-BPv">
+                            <connections>
+                                <segue destination="cp6-1z-JR4" kind="unwind" identifier="Cancel to TableView" unwindAction="goBackWithSegue:" id="yXd-QS-gzp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zg8-1H-pnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cp6-1z-JR4" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="1165.3673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hjU-iY-z5M">
@@ -238,6 +306,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lwl-NA-AfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1793" y="1452"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FW4-zP-Z8W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bly-aR-LmX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RZC-XY-Olq">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="f9K-AK-hO7" kind="relationship" relationship="rootViewController" id="60W-OV-Hli"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfJ-aq-EF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="1162"/>
         </scene>
     </scenes>
     <resources>
