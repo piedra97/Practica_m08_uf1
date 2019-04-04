@@ -9,13 +9,13 @@
 import Foundation
 
 class Team {
-    var idTeam:String
+    var idTeam:Int
     var teamName:String
     var conference:String
     var city:String
     var logo:String
     
-    init (idTeam:String, teamName:String, conference:String, city:String, logo:String) {
+    init (idTeam:Int, teamName:String, conference:String, city:String, logo:String) {
         self.idTeam = idTeam
         self.teamName = teamName
         self.conference = conference
@@ -23,3 +23,4 @@ class Team {
         self.logo = logo
     }
 }
+

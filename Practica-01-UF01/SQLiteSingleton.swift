@@ -29,4 +29,5 @@ class SQLiteSingleton{
         }
         return database!
     }
+
 }

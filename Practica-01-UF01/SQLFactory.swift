@@ -9,12 +9,15 @@
 import Foundation
 
 class SQLFactory {
-    class func createFactory(_ type:Int)->SQLiteDAO{
+    class func createFactory(_ type:Int)->SQLiteDAO?{
         switch(type){
             case 0: return MatchManager()
             case 1: return MatchTeamManager()
+            case 2: return TeamManager()
         default:
-            return TeamManager()
-        }
+            break
+            
+        }						
+        return nil
     }
 }

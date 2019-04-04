@@ -45,8 +45,9 @@
 		EF2B2E83224D305500DC32CF /* warriors.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E65224D305400DC32CF /* warriors.png */; };
 		EF2B2E84224D305500DC32CF /* grizzlies.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E66224D305500DC32CF /* grizzlies.png */; };
 		EF2B2E85224D305500DC32CF /* mavericks.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E67224D305500DC32CF /* mavericks.png */; };
+		EF43DA3522564770004CA8E5 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43DA3422564770004CA8E5 /* MenuViewController.swift */; };
+		EF43DA37225647A0004CA8E5 /* EditMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF43DA36225647A0004CA8E5 /* EditMatchViewController.swift */; };
 		EF6BA7072243EB7F00B51A73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */; };
-		EF6BA7092243EB7F00B51A73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6BA7082243EB7F00B51A73 /* ViewController.swift */; };
 		EF6BA70C2243EB7F00B51A73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6BA70A2243EB7F00B51A73 /* Main.storyboard */; };
 		EF6BA70E2243EB8500B51A73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6BA70D2243EB8500B51A73 /* Assets.xcassets */; };
 		EF6BA7112243EB8500B51A73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF6BA70F2243EB8500B51A73 /* LaunchScreen.storyboard */; };
@@ -111,9 +112,10 @@
 		EF2B2E65224D305400DC32CF /* warriors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warriors.png; sourceTree = "<group>"; };
 		EF2B2E66224D305500DC32CF /* grizzlies.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grizzlies.png; sourceTree = "<group>"; };
 		EF2B2E67224D305500DC32CF /* mavericks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mavericks.png; sourceTree = "<group>"; };
+		EF43DA3422564770004CA8E5 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		EF43DA36225647A0004CA8E5 /* EditMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatchViewController.swift; sourceTree = "<group>"; };
 		EF6BA7032243EB7F00B51A73 /* Practica-01-UF01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Practica-01-UF01.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF6BA7082243EB7F00B51A73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF6BA70B2243EB7F00B51A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF6BA70D2243EB8500B51A73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF6BA7102243EB8500B51A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,7 +130,7 @@
 		EFCDA823225258FA0071FF15 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
 		EFCDA825225259130071FF15 /* MatchTeamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTeamManager.swift; sourceTree = "<group>"; };
 		EFCDA8272252593C0071FF15 /* SQLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLFactory.swift; sourceTree = "<group>"; };
-		EFCDA8292252606D0071FF15 /* nba.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nba.db; sourceTree = SOURCE_ROOT; };
+		EFCDA8292252606D0071FF15 /* nba.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = nba.db; path = "Practica-01-UF01/fmdb/nba.db"; sourceTree = SOURCE_ROOT; };
 		EFCDA82A225260F80071FF15 /* SQLiteSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteSingleton.swift; sourceTree = "<group>"; };
 		EFCDA82C225267BC0071FF15 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		EFCDA82E225268EE0071FF15 /* TeamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamManager.swift; sourceTree = "<group>"; };
@@ -196,7 +198,6 @@
 		EF2B2E48224D28E100DC32CF /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
-				EFCDA8292252606D0071FF15 /* nba.db */,
 				EF2B2E3D224D28C500DC32CF /* FMDatabase.h */,
 				EF2B2E3C224D28C500DC32CF /* FMDatabase.m */,
 				EF2B2E42224D28C500DC32CF /* FMDatabaseAdditions.h */,
@@ -207,6 +208,7 @@
 				EF2B2E40224D28C500DC32CF /* FMDatabaseQueue.m */,
 				EF2B2E38224D28C400DC32CF /* FMDB.h */,
 				EF2B2E39224D28C400DC32CF /* FMResultSet.h */,
+				EFCDA8292252606D0071FF15 /* nba.db */,
 				EF2B2E3E224D28C500DC32CF /* FMResultSet.m */,
 			);
 			path = fmdb;
@@ -235,7 +237,6 @@
 				0077AC412250C9290017B4FB /* Images */,
 				EF2B2E48224D28E100DC32CF /* fmdb */,
 				EF6BA7062243EB7F00B51A73 /* AppDelegate.swift */,
-				EF6BA7082243EB7F00B51A73 /* ViewController.swift */,
 				EF6BA70A2243EB7F00B51A73 /* Main.storyboard */,
 				EFA6BCEA224937AA005F3C2E /* DetailTeamViewController.swift */,
 				EFA6BCE622493617005F3C2E /* ListOfTeamsTableViewController.swift */,
@@ -254,6 +255,8 @@
 				EFCDA82A225260F80071FF15 /* SQLiteSingleton.swift */,
 				EFCDA82C225267BC0071FF15 /* Team.swift */,
 				EFCDA82E225268EE0071FF15 /* TeamManager.swift */,
+				EF43DA3422564770004CA8E5 /* MenuViewController.swift */,
+				EF43DA36225647A0004CA8E5 /* EditMatchViewController.swift */,
 			);
 			path = "Practica-01-UF01";
 			sourceTree = "<group>";
@@ -363,7 +366,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFCDA826225259130071FF15 /* MatchTeamManager.swift in Sources */,
-				EF6BA7092243EB7F00B51A73 /* ViewController.swift in Sources */,
 				EFCDA82D225267BC0071FF15 /* Team.swift in Sources */,
 				EF2B2E31224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift in Sources */,
 				EFA6BCE722493617005F3C2E /* ListOfTeamsTableViewController.swift in Sources */,
@@ -371,9 +373,11 @@
 				EFCDA82B225260F80071FF15 /* SQLiteSingleton.swift in Sources */,
 				EF2B2E45224D28C500DC32CF /* FMDatabase.m in Sources */,
 				EFCDA8282252593C0071FF15 /* SQLFactory.swift in Sources */,
+				EF43DA37225647A0004CA8E5 /* EditMatchViewController.swift in Sources */,
 				EF2B2E46224D28C500DC32CF /* FMResultSet.m in Sources */,
 				EF2B2E33224D0FC900DC32CF /* DetailMatchViewController.swift in Sources */,
 				EFA6BCEB224937AA005F3C2E /* DetailTeamViewController.swift in Sources */,
+				EF43DA3522564770004CA8E5 /* MenuViewController.swift in Sources */,
 				EFCDA822225255C20071FF15 /* SQLiteDAO.swift in Sources */,
 				EF2B2E44224D28C500DC32CF /* FMDatabasePool.m in Sources */,
 				EFCDA82F225268EE0071FF15 /* TeamManager.swift in Sources */,
