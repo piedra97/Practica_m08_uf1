@@ -8,7 +8,7 @@
 
 import Foundation
 
-private let dataBaseFileName:String = "nba.db"
+private let dataBaseFileName:String = "nbaPractica"
 private var dataBasePath:String=String()
 
 private var database:FMDatabase?

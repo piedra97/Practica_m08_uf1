@@ -19,8 +19,22 @@ class EditMatchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerData += teamManager.selectTeamName(database)
-        // Do any additional setup after loading the view.
+        if database.open() {
+        let teams = teamManager.readRecords(database)
+            if teams.isEmpty{
+                print("No records in EQUIPOS TABLE")
+            }else {
+                for item in teams {
+                    if let team = item as? Team {
+                        pickerData.append(team.teamName)
+                }
+            }
+        }
+            database.close()
+            
+        }else {
+            print("Error: \(database.lastErrorMessage())")
+        }
     }
     
 

@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
-    let dataBaseResourceFileName:String = "nba.db"
+    let dataBaseResourceFileName:String = "nbaPractica"
     var databasePath:String=String()
     
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class MenuViewController: UIViewController {
             
             if !fileManager.fileExists(atPath: databasePath) {
                 
-                if let sourceDataBaseURL = Bundle.main.url(forResource: "nba", withExtension: "db") {
+                if let sourceDataBaseURL = Bundle.main.url(forResource: dataBaseResourceFileName, withExtension: "db") {
                     do {
                         try fileManager.copyItem(at: sourceDataBaseURL, to: dataBaseURL)
                         print("Database copied")

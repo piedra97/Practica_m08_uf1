@@ -47,7 +47,7 @@ class TeamManager: SQLiteDAO {
             if let results:FMResultSet = database.executeQuery(querySQL, withArgumentsIn: arrayResult) {
                 
                 while(results.next()){
-                    let team = Team(idTeam: Int(results.int(forColumnIndex: 0)),teamName: String(results.int(forColumnIndex: 0)), conference: String(results.int(forColumnIndex: 0)), city: String(results.int(forColumnIndex: 0)), logo: String(results.int(forColumnIndex: 0)))
+                    let team = Team(idTeam: Int(results.int(forColumnIndex: 0)),teamName: String(results.string(forColumnIndex: 1)!), conference: String(results.string(forColumnIndex: 2)!), city: String(results.string(forColumnIndex: 3)!), logo: String(results.string(forColumnIndex: 4)!))
                     arrayResult.append(team)
                 }
                 results.close()
@@ -60,26 +60,4 @@ class TeamManager: SQLiteDAO {
         return arrayResult
     }
     
-    func selectTeamName(_ database: FMDatabase) ->  Array<String> {
-    var arrayResult:Array<String>=Array()
-    if database.open() {
-    let querySQL = "SELECT NOMBRE FROM EQUIPO"
-    if let results:FMResultSet = database.executeQuery(querySQL, withArgumentsIn: arrayResult) {
-    
-    while(results.next()){
-        let team = String(results.int(forColumnIndex: 0))
-        arrayResult.append(team)
-        
-        }
-    results.close()
-        
-        }
-    database.close()
-    } else {
-    print("Error: \(database.lastErrorMessage())")
-    
-    }
-    return arrayResult
-    }
-        
-    }
+}
