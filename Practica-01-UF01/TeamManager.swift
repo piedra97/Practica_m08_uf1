@@ -11,31 +11,14 @@ import Foundation
 class TeamManager: SQLiteDAO {
     var result = false
     func insert(_ database: FMDatabase, newRecord: AnyObject) -> Bool {
-        if database.open() {
-            let insertSQL = "INSERT INTO EQUIPO (ID_EQUIPO, NOMBRE, CONFERENCIA, CIUDAD, LOGO ) VALUES(?,?,?,?,?)"
-            let data:Array=["\((newRecord as! Team).idTeam)", "\((newRecord as! Team).teamName)","\((newRecord as! Team).conference)","\((newRecord as! Team).city)", "\((newRecord as! Team).logo)"]
-            result = database.executeUpdate(insertSQL, withArgumentsIn: data)
-            database.close()
-        }else {
-            print("Error: \(database.lastErrorMessage())")
-            
-        }
-        return result
+    
+        return false
         
     }
     
     func delete(_ database: FMDatabase, recordToDelete: AnyObject) -> Bool {
-        var result = false
-        if database.open() {
-            let deleteSQL = "DELETE FROM EQUIPO WHERE ID_EQUIPO = ?"
-            let data:Array=["\(recordToDelete)"]
-            result = database.executeUpdate(deleteSQL, withArgumentsIn: data)
-            database.close()
-        }else {
-            print("Error: \(database.lastErrorMessage())")
-            
-        }
-        return result
+    
+        return false
         
     }
     

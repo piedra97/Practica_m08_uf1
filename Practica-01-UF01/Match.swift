@@ -10,8 +10,16 @@ import Foundation
 
 class Match {
     var idPartido:Int
+    var fkLocalTeam:Int
+    var fkAwayTeam:Int
+    var localScore:Int
+    var awayScore:Int
     
-    init(idPartido:Int) {
+    init(idPartido:Int, fkLocalTeam:Int, fkAwayTeam:Int, localScore:Int, awayScore:Int) {
         self.idPartido = idPartido
+        self.fkLocalTeam = idPartido
+        self.fkAwayTeam = idPartido
+        self.localScore = idPartido
+        self.awayScore = idPartido
     }
 }
