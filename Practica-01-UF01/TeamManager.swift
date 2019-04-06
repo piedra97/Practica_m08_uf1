@@ -43,4 +43,46 @@ class TeamManager: SQLiteDAO {
         return arrayResult
     }
     
+    func selecTeamNameInMatch(_ database: FMDatabase,_ recordToSelect: AnyObject) -> String {
+        var result = [String]()
+        if database.open() {
+            let querySQL = "SELECT NOMBRE FROM EQUIPO WHERE ID_EQUIPO = ?"
+            let data:Array=["\(recordToSelect)"]
+            if let results:FMResultSet = database.executeQuery(querySQL, withArgumentsIn: data) {
+                while(results.next()) {
+                    let name = String(results.string(forColumn: "NOMBRE")!)
+                    result.append(name)
+                }
+                results.close()
+            }
+            database.close()
+            
+        }else {
+            print("Error: \(database.lastErrorMessage())")
+        }
+        
+        return result[0]
+    }
+    
+    func selecTeamIDWhitName(_ database: FMDatabase,_ recordToSelect: AnyObject) -> Int {
+        var result = [Int]()
+        if database.open() {
+            let querySQL = "SELECT ID_EQUIPO FROM EQUIPO WHERE NOMBRE = ?"
+            let data:Array=["\(recordToSelect)"]
+            if let results:FMResultSet = database.executeQuery(querySQL, withArgumentsIn: data) {
+                while(results.next()) {
+                    let id = Int(results.string(forColumn: "ID_EQUIPO")!)
+                    result.append(id ?? 0)
+                }
+                results.close()
+            }
+            database.close()
+            
+        }else {
+            print("Error: \(database.lastErrorMessage())")
+        }
+        
+        return result[0]
+    }
+    
 }

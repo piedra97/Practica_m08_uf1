@@ -12,8 +12,7 @@ class SQLFactory {
     class func createFactory(_ type:Int)->SQLiteDAO?{
         switch(type){
             case 0: return MatchManager()
-            case 1: return MatchTeamManager()
-            case 2: return TeamManager()
+            case 1: return TeamManager()
         default:
             break
             

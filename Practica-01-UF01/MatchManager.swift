@@ -47,7 +47,7 @@ class MatchManager: SQLiteDAO {
             if let results:FMResultSet = database.executeQuery(querySQL, withArgumentsIn: arrayResult) {
                 
                 while(results.next()){
-                    let match = Match(idPartido:  Int(results.int(forColumnIndex: 0)), fkLocalTeam:  Int(results.int(forColumnIndex: 1)), fkAwayTeam:  Int(results.int(forColumnIndex: 2)), localScore:  Int(results.int(forColumnIndex: 3)), awayScore:  Int(results.int(forColumnIndex: 4)))
+                    let match = Match(idPartido: Int(results.int(forColumnIndex: 0)), fkLocalTeam:  Int(results.int(forColumnIndex: 1)), fkAwayTeam:  Int(results.int(forColumnIndex: 2)), localScore:  Int(results.int(forColumnIndex: 3)), awayScore:  Int(results.int(forColumnIndex: 4)))
                     arrayResult.append(match)
                 }
                 results.close()
@@ -61,6 +61,7 @@ class MatchManager: SQLiteDAO {
         
     }
     
+        
 }
     
     

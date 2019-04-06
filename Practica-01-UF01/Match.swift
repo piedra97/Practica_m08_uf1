@@ -9,17 +9,24 @@
 import Foundation
 
 class Match {
-    var idPartido:Int
-    var fkLocalTeam:Int
-    var fkAwayTeam:Int
-    var localScore:Int
-    var awayScore:Int
+    var idPartido:Int=0
+    var fkLocalTeam:Int=0
+    var fkAwayTeam:Int=0
+    var localScore:Int=0
+    var awayScore:Int=0
+    
+    init(fkLocalTeam:Int, fkAwayTeam:Int, localScore:Int, awayScore:Int) {
+        self.fkLocalTeam = fkLocalTeam
+        self.fkAwayTeam = fkAwayTeam
+        self.localScore = localScore
+        self.awayScore = awayScore
+    }
     
     init(idPartido:Int, fkLocalTeam:Int, fkAwayTeam:Int, localScore:Int, awayScore:Int) {
         self.idPartido = idPartido
-        self.fkLocalTeam = idPartido
-        self.fkAwayTeam = idPartido
-        self.localScore = idPartido
-        self.awayScore = idPartido
+        self.fkLocalTeam = fkLocalTeam
+        self.fkAwayTeam = fkAwayTeam
+        self.localScore = localScore
+        self.awayScore = awayScore
     }
 }

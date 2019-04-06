@@ -8,22 +8,36 @@
 
 import UIKit
 
-class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     var database : FMDatabase = SQLiteSingleton.getInstance()
-    let teamManager : TeamManager = (SQLFactory.createFactory(2) as! TeamManager)
-    var pickerData: [String] = [String]()
+    let teamManager : TeamManager = (SQLFactory.createFactory(1) as! TeamManager)
+    var pickerLocalData: [String] = [String]()
+    var pickerAwayData: [String] = [String]()
+    var matchToInsert : Match?
+    var nameLocalSelected:String?
+    var nameAwaySelected:String?
     
     @IBOutlet weak var pickerLocal: UIPickerView!
     @IBOutlet weak var pickerAway: UIPickerView!
+    
+    @IBOutlet weak var scoreLocalTextField: UITextField!
+    
+    @IBOutlet weak var scoreAwayLocalTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.pickerLocal.delegate = self
         self.pickerLocal.dataSource = self
+        self.pickerLocal.tag = 1
+        
         self.pickerAway.delegate = self
         self.pickerAway.dataSource = self
+        self.pickerAway.tag = 2
+        
+        scoreLocalTextField.delegate = self
+        scoreAwayLocalTextField.delegate = self
         
         if database.open() {
         let teams = teamManager.readRecords(database)
@@ -32,7 +46,8 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }else {
                 for item in teams {
                     if let team = item as? Team {
-                        pickerData.append(team.teamName)
+                        pickerLocalData.append(team.teamName)
+                        pickerAwayData.append(team.teamName)
                 }
             }
         }
@@ -54,15 +69,81 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        
+        if pickerLocal.tag == 1 {
+            return pickerLocalData.count
+        } else if pickerAway.tag == 2 {
+            return pickerAwayData.count
+        }
+        return 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+      
+        if pickerLocal.tag == 1 {
+            return pickerLocalData[row]
+        } else if pickerAway.tag == 2 {
+            return pickerAwayData[row]
+        }
+        
+        return "default"
     }
     
-
-
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerLocal.tag == 1 {
+            nameLocalSelected = pickerLocalData[row] as String
+            pickerLocal.tag = 2
+            
+        }else if pickerAway.tag == 2 {
+            nameAwaySelected = pickerAwayData[row] as String
+        }
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender:Any?) {
+        var fk_nameLocal:Int = 0
+        var fk_nameAway:Int = 0
+        if database.open() {
+            fk_nameLocal = teamManager.selecTeamIDWhitName(database, nameLocalSelected as AnyObject)
+            fk_nameAway = teamManager.selecTeamIDWhitName(database, nameAwaySelected as AnyObject)
+            database.close()
+        }else {
+            print("Error: \(database.lastErrorMessage())")
+        }
+        
+        if segue.identifier == "Save to TableView" {
+            if let localScoreToInsert = scoreLocalTextField.text {
+                if let awayScoreToInsert = scoreAwayLocalTextField.text {
+                    if !localScoreToInsert.isEmpty && !awayScoreToInsert.isEmpty {
+                        let newMatch:Match = Match(fkLocalTeam: fk_nameLocal, fkAwayTeam: fk_nameAway, localScore: Int(localScoreToInsert) ?? 0, awayScore: Int(awayScoreToInsert) ?? 0)
+                        if database.open() {
+                            let result = teamManager.insert(database, newRecord: newMatch)
+                                if result {
+                                    print("Added Match")
+                                } else {
+                                    print("Failed to add match")
+                                    print("Error: \(database.lastErrorMessage())")
+                                }
+                                database.close()
+                            
+                        }else {
+                            print("Error: \(database.lastErrorMessage())")
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+        }
+    
     /*
     // MARK: - Navigation
 
@@ -72,7 +153,5 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func goBack(segue : UIStoryboardSegue) {
-        
-    }
+    
 }

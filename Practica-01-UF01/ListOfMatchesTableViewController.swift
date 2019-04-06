@@ -9,9 +9,24 @@
 import UIKit
 
 class ListOfMatchesTableViewController: UITableViewController, UISplitViewControllerDelegate {
+    
+    var database : FMDatabase = SQLiteSingleton.getInstance()
+    let teamManager : TeamManager = (SQLFactory.createFactory(1) as! TeamManager)
+    let matchManager : MatchManager = (SQLFactory.createFactory(0) as! MatchManager)
+    var matchItem = MatchItem()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if database.open() {
+            matchItem.items = matchManager.readRecords(database) as! [Match]
+            if matchItem.items.isEmpty {
+                print("No records in EQUIPO TABLE")
+            }
+            database.close()
+        }else {
+            print("Error: \(database.lastErrorMessage())")
+        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,13 +56,57 @@ class ListOfMatchesTableViewController: UITableViewController, UISplitViewContro
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return matchItem.items.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath)
+        
+        let item:Match = matchItem.items[indexPath.row]
+        
+        let nameLocalToSelect = item.fkLocalTeam
+        let nameAwayToSelect = item.fkAwayTeam
+        
+        
+        //get the name of the team within the match table. Thanks to his FK.
+        cell.textLabel?.text = teamManager.selecTeamNameInMatch(database, nameLocalToSelect as AnyObject)
+        cell.detailTextLabel?.text = teamManager.selecTeamNameInMatch(database, nameAwayToSelect as AnyObject)
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let recordToDelete = matchItem.items[indexPath.row].idPartido
+        if editingStyle == .delete {
+            matchItem.deleteItem(index: indexPath.row)
+            if database.open() {
+                
+               let result = matchManager.delete(database, recordToDelete: recordToDelete as AnyObject)
+                if result {
+                    print ("Match Deleted")
+                    
+                } else {
+                    print("Failed to delete match")
+                    print("Error: \(database.lastErrorMessage())")
+                }
+                
+                database.close()
+            } else {
+                print("Error: \(database.lastErrorMessage())")
+            }
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+    }
+    
+    
     
     @IBAction func goBack(segue : UIStoryboardSegue) {
         
