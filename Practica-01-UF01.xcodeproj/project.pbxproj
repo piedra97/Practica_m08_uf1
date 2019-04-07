@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00EC0912225899C200AC6BF7 /* MatchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EC0911225899C200AC6BF7 /* MatchItem.swift */; };
 		EF2B2E31224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E30224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift */; };
 		EF2B2E33224D0FC900DC32CF /* DetailMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E32224D0FC900DC32CF /* DetailMatchViewController.swift */; };
 		EF2B2E36224D281200DC32CF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2B2E35224D281200DC32CF /* libsqlite3.tbd */; };
@@ -57,10 +58,8 @@
 		EFA6BCE722493617005F3C2E /* ListOfTeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6BCE622493617005F3C2E /* ListOfTeamsTableViewController.swift */; };
 		EFA6BCEB224937AA005F3C2E /* DetailTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA6BCEA224937AA005F3C2E /* DetailTeamViewController.swift */; };
 		EFCDA81E225253C20071FF15 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDA81D225253C20071FF15 /* Match.swift */; };
-		EFCDA820225254BB0071FF15 /* MatchTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDA81F225254BB0071FF15 /* MatchTeam.swift */; };
 		EFCDA822225255C20071FF15 /* SQLiteDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDA821225255C20071FF15 /* SQLiteDAO.swift */; };
 		EFCDA824225258FA0071FF15 /* MatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDA823225258FA0071FF15 /* MatchManager.swift */; };
-		EFCDA826225259130071FF15 /* MatchTeamManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDA825225259130071FF15 /* MatchTeamManager.swift */; };
 		EFCDA8282252593C0071FF15 /* SQLFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDA8272252593C0071FF15 /* SQLFactory.swift */; };
 		EFCDA82B225260F80071FF15 /* SQLiteSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDA82A225260F80071FF15 /* SQLiteSingleton.swift */; };
 		EFCDA82D225267BC0071FF15 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDA82C225267BC0071FF15 /* Team.swift */; };
@@ -68,6 +67,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00EC0911225899C200AC6BF7 /* MatchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchItem.swift; sourceTree = "<group>"; };
 		EF2B2E30224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMatchesTableViewController.swift; sourceTree = "<group>"; };
 		EF2B2E32224D0FC900DC32CF /* DetailMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMatchViewController.swift; sourceTree = "<group>"; };
 		EF2B2E35224D281200DC32CF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -127,10 +127,8 @@
 		EFA6BCE622493617005F3C2E /* ListOfTeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfTeamsTableViewController.swift; sourceTree = "<group>"; };
 		EFA6BCEA224937AA005F3C2E /* DetailTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTeamViewController.swift; sourceTree = "<group>"; };
 		EFCDA81D225253C20071FF15 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
-		EFCDA81F225254BB0071FF15 /* MatchTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTeam.swift; sourceTree = "<group>"; };
 		EFCDA821225255C20071FF15 /* SQLiteDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDAO.swift; sourceTree = "<group>"; };
 		EFCDA823225258FA0071FF15 /* MatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchManager.swift; sourceTree = "<group>"; };
-		EFCDA825225259130071FF15 /* MatchTeamManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTeamManager.swift; sourceTree = "<group>"; };
 		EFCDA8272252593C0071FF15 /* SQLFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLFactory.swift; sourceTree = "<group>"; };
 		EFCDA82A225260F80071FF15 /* SQLiteSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteSingleton.swift; sourceTree = "<group>"; };
 		EFCDA82C225267BC0071FF15 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -248,16 +246,15 @@
 				EF6BA7122243EB8500B51A73 /* Info.plist */,
 				EF2B2E37224D28C400DC32CF /* Practica-01-UF01-Bridging-Header.h */,
 				EFCDA81D225253C20071FF15 /* Match.swift */,
-				EFCDA81F225254BB0071FF15 /* MatchTeam.swift */,
 				EFCDA821225255C20071FF15 /* SQLiteDAO.swift */,
 				EFCDA823225258FA0071FF15 /* MatchManager.swift */,
-				EFCDA825225259130071FF15 /* MatchTeamManager.swift */,
 				EFCDA8272252593C0071FF15 /* SQLFactory.swift */,
 				EFCDA82A225260F80071FF15 /* SQLiteSingleton.swift */,
 				EFCDA82C225267BC0071FF15 /* Team.swift */,
 				EFCDA82E225268EE0071FF15 /* TeamManager.swift */,
 				EF43DA3422564770004CA8E5 /* MenuViewController.swift */,
 				EF43DA36225647A0004CA8E5 /* EditMatchViewController.swift */,
+				00EC0911225899C200AC6BF7 /* MatchItem.swift */,
 			);
 			path = "Practica-01-UF01";
 			sourceTree = "<group>";
@@ -367,11 +364,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFCDA826225259130071FF15 /* MatchTeamManager.swift in Sources */,
 				EFCDA82D225267BC0071FF15 /* Team.swift in Sources */,
 				EF2B2E31224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift in Sources */,
 				EFA6BCE722493617005F3C2E /* ListOfTeamsTableViewController.swift in Sources */,
-				EFCDA820225254BB0071FF15 /* MatchTeam.swift in Sources */,
 				EFCDA82B225260F80071FF15 /* SQLiteSingleton.swift in Sources */,
 				EF2B2E45224D28C500DC32CF /* FMDatabase.m in Sources */,
 				EFCDA8282252593C0071FF15 /* SQLFactory.swift in Sources */,
@@ -379,6 +374,7 @@
 				EF2B2E46224D28C500DC32CF /* FMResultSet.m in Sources */,
 				EF2B2E33224D0FC900DC32CF /* DetailMatchViewController.swift in Sources */,
 				EFA6BCEB224937AA005F3C2E /* DetailTeamViewController.swift in Sources */,
+				00EC0912225899C200AC6BF7 /* MatchItem.swift in Sources */,
 				EF43DA3522564770004CA8E5 /* MenuViewController.swift in Sources */,
 				EFCDA822225255C20071FF15 /* SQLiteDAO.swift in Sources */,
 				EF2B2E44224D28C500DC32CF /* FMDatabasePool.m in Sources */,

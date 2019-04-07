@@ -279,12 +279,13 @@
                     <navigationItem key="navigationItem" title="Inserta Partido" id="MBt-z9-oNH">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jXM-cc-xgy">
                             <connections>
-                                <segue destination="cp6-1z-JR4" kind="unwind" identifier="Save to TableView" unwindAction="goBackWithSegue:" id="vTW-dj-JVz"/>
+                                <segue destination="cp6-1z-JR4" kind="unwind" identifier="Cancel To TableView" unwindAction="goBackWithSegue:" id="ocE-oo-h0e"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="save" id="Rpq-mL-BPv">
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="Item" systemItem="save" id="Rpq-mL-BPv">
                             <connections>
-                                <segue destination="cp6-1z-JR4" kind="unwind" identifier="Cancel to TableView" unwindAction="goBackWithSegue:" id="yXd-QS-gzp"/>
+                                <action selector="saveAction:" destination="f9K-AK-hO7" id="IB3-sJ-lwv"/>
+                                <segue destination="cp6-1z-JR4" kind="unwind" identifier="Save To TableView" unwindAction="goBackWithSegue:" id="VQR-qa-Uod"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

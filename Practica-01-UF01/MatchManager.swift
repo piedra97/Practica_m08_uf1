@@ -27,7 +27,7 @@ class MatchManager: SQLiteDAO {
     func delete(_ database: FMDatabase, recordToDelete: AnyObject) -> Bool {
         var result = false
             if database.open() {
-                let deleteSQL = "DELETE FROM PARTIDO WHERE ID_PARTIDO = ?"
+                let deleteSQL = "DELETE FROM PARTIDO WHERE PARTIDO_ID = ?"
                 let data:Array=["\(recordToDelete)"]
                 result = database.executeUpdate(deleteSQL, withArgumentsIn: data)
                 database.close()
@@ -60,6 +60,27 @@ class MatchManager: SQLiteDAO {
         return arrayResult
         
     }
+    
+    func selecPKMatch(_ database: FMDatabase) -> Int {
+        var result = [Int]()
+        if database.open() {
+            let querySQL = "SELECT MAX(PARTIDO_ID) FROM PARTIDO"
+            if let results:FMResultSet = database.executeQuery(querySQL, withArgumentsIn: result) {
+                while(results.next()) {
+                    let id = results.int(forColumnIndex: 0)
+                    result.append(Int(id))
+                }
+                results.close()
+            }
+            database.close()
+            
+        }else {
+            print("Error: \(database.lastErrorMessage())")
+        }
+        
+        return result[0]
+    }
+
     
         
 }

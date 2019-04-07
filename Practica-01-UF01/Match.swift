@@ -16,6 +16,7 @@ class Match {
     var awayScore:Int=0
     
     init(fkLocalTeam:Int, fkAwayTeam:Int, localScore:Int, awayScore:Int) {
+
         self.fkLocalTeam = fkLocalTeam
         self.fkAwayTeam = fkAwayTeam
         self.localScore = localScore
@@ -29,4 +30,5 @@ class Match {
         self.localScore = localScore
         self.awayScore = awayScore
     }
+    
 }

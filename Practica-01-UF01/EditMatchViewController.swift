@@ -12,6 +12,7 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     var database : FMDatabase = SQLiteSingleton.getInstance()
     let teamManager : TeamManager = (SQLFactory.createFactory(1) as! TeamManager)
+    let matchManager : MatchManager = (SQLFactory.createFactory(0) as! MatchManager)
     var pickerLocalData: [String] = [String]()
     var pickerAwayData: [String] = [String]()
     var matchToInsert : Match?
@@ -79,7 +80,7 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-      
+        
         if pickerLocal.tag == 1 {
             return pickerLocalData[row]
         } else if pickerAway.tag == 2 {
@@ -105,44 +106,57 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return true
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender:Any?) {
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       // var id_toInsert = 0
+        if segue.identifier == "Save To TableView" {
         var fk_nameLocal:Int = 0
         var fk_nameAway:Int = 0
         if database.open() {
+            //id_toInsert = mat
             fk_nameLocal = teamManager.selecTeamIDWhitName(database, nameLocalSelected as AnyObject)
             fk_nameAway = teamManager.selecTeamIDWhitName(database, nameAwaySelected as AnyObject)
             database.close()
+            
         }else {
             print("Error: \(database.lastErrorMessage())")
+            
         }
-        
-        if segue.identifier == "Save to TableView" {
-            if let localScoreToInsert = scoreLocalTextField.text {
-                if let awayScoreToInsert = scoreAwayLocalTextField.text {
-                    if !localScoreToInsert.isEmpty && !awayScoreToInsert.isEmpty {
-                        let newMatch:Match = Match(fkLocalTeam: fk_nameLocal, fkAwayTeam: fk_nameAway, localScore: Int(localScoreToInsert) ?? 0, awayScore: Int(awayScoreToInsert) ?? 0)
-                        if database.open() {
-                            let result = teamManager.insert(database, newRecord: newMatch)
-                                if result {
-                                    print("Added Match")
-                                } else {
-                                    print("Failed to add match")
-                                    print("Error: \(database.lastErrorMessage())")
-                                }
-                                database.close()
+        if let localScoreToInsert = scoreLocalTextField.text {
+            if let awayScoreToInsert = scoreAwayLocalTextField.text {
+                if !localScoreToInsert.isEmpty && !awayScoreToInsert.isEmpty {
+                    let newMatch:Match = Match(fkLocalTeam: fk_nameLocal, fkAwayTeam: fk_nameAway, localScore: Int(localScoreToInsert)!, awayScore: Int(awayScoreToInsert)!)
+                    if database.open() {
+                        let result = matchManager.insert(database, newRecord: newMatch)
+                        
+                        if result {
+                            print("Added Match")
                             
-                        }else {
+                        } else {
+                            print("Failed to add match")
                             print("Error: \(database.lastErrorMessage())")
-                            }
                             
                         }
+                        database.close()
+                        
+                    }else {
+                        print("Error: \(database.lastErrorMessage())")
                         
                     }
                     
                 }
                 
             }
+            
+            }
+            
         }
+        
+    }
+        
+
+    
+    
     
     /*
     // MARK: - Navigation
