@@ -15,9 +15,10 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     let matchManager : MatchManager = (SQLFactory.createFactory(0) as! MatchManager)
     var pickerLocalData: [String] = [String]()
     var pickerAwayData: [String] = [String]()
-    var matchToInsert : Match?
-    var nameLocalSelected:String?
-    var nameAwaySelected:String?
+    var nameLocalSelected:String = " "
+    var nameAwaySelected:String = " "
+    
+    @IBOutlet weak var saveButtonBar: UIBarButtonItem!
     
     @IBOutlet weak var pickerLocal: UIPickerView!
     @IBOutlet weak var pickerAway: UIPickerView!
@@ -26,9 +27,11 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBOutlet weak var scoreAwayLocalTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.saveButtonBar.isEnabled = false
         self.pickerLocal.delegate = self
         self.pickerLocal.dataSource = self
         self.pickerLocal.tag = 1
@@ -57,6 +60,14 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }else {
             print("Error: \(database.lastErrorMessage())")
         }
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if !scoreLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty && !nameLocalSelected.isEmpty && !nameAwaySelected.isEmpty{
+            self.saveButtonBar.isEnabled = true
+            
+        }
     }
     
     
@@ -64,6 +75,7 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

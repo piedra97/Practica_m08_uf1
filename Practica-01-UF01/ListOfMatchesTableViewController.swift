@@ -74,8 +74,18 @@ class ListOfMatchesTableViewController: UITableViewController, UISplitViewContro
         
         
         //get the name of the team within the match table. Thanks to his FK.
-        cell.textLabel?.text = teamManager.selecTeamNameInMatch(database, nameLocalToSelect as AnyObject)
-        cell.detailTextLabel?.text = teamManager.selecTeamNameInMatch(database, nameAwayToSelect as AnyObject)
+        var localTeamName = " "
+        var awayTeamName = " "
+        if database.open() {
+           localTeamName = teamManager.selecTeamNameInMatch(database, nameLocalToSelect as AnyObject)
+            awayTeamName = teamManager.selecTeamNameInMatch(database, nameAwayToSelect as AnyObject)
+            database.close()
+        }else {
+            print("Error: \(database.lastErrorMessage())")
+        }
+        cell.textLabel?.text = localTeamName
+        cell.detailTextLabel?.text = awayTeamName
+        cell.accessoryType = .detailDisclosureButton
         
         return cell
     }
@@ -106,9 +116,45 @@ class ListOfMatchesTableViewController: UITableViewController, UISplitViewContro
         }
     }
     
+   /* override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        let item = matchItem.items[indexPath.row]
+        self.performSegue(withIdentifier: "Detail Segue", sender: item)
+        tableView.reloadData()
+    }*/
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Match Detail Segue" {
+            if let cell = sender as? UITableViewCell,
+                let indexPath = tableView.indexPath(for: cell)
+            {
+                if let dvmc = segue.destination as? DetailMatchViewController {
+                    dvmc.matchToWork = matchItem.items[indexPath.row]
+                    
+                }
+                
+            }
+            
+        }
+    }
     
     
     @IBAction func goBack(segue : UIStoryboardSegue) {
+        switch segue.identifier {
+        case "Save To TableView":
+            if database.open() {
+                matchItem.items = matchManager.readRecords(database) as! [Match]
+                if matchItem.items.isEmpty {
+                    print("No records in EQUIPO TABLE")
+                }
+                database.close()
+            }else {
+                print("Error: \(database.lastErrorMessage())")
+            }
+            tableView.reloadData()
+        default:
+            break
+        }
         
     }
 

@@ -85,5 +85,26 @@ class TeamManager: SQLiteDAO {
         return result[0]
     }
     
+    func selecTeamLogoInMatch(_ database: FMDatabase,_ recordToSelect: AnyObject) -> String {
+        var result = [String]()
+        if database.open() {
+            let querySQL = "SELECT LOGO FROM EQUIPO WHERE ID_EQUIPO = ?"
+            let data:Array=["\(recordToSelect)"]
+            if let results:FMResultSet = database.executeQuery(querySQL, withArgumentsIn: data) {
+                while(results.next()) {
+                    let name = String(results.string(forColumn: "LOGO")!)
+                    result.append(name)
+                }
+                results.close()
+            }
+            database.close()
+            
+        }else {
+            print("Error: \(database.lastErrorMessage())")
+        }
+        
+        return result[0]
+    }
+    
     
 }
