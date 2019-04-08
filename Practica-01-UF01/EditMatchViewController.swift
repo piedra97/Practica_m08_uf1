@@ -103,12 +103,13 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerLocal.tag == 1 {
+        if pickerView.tag == 1 {
             nameLocalSelected = pickerLocalData[row] as String
-            pickerLocal.tag = 2
+            print(nameLocalSelected)
             
-        }else if pickerAway.tag == 2 {
+        }else if pickerView.tag == 2 {
             nameAwaySelected = pickerAwayData[row] as String
+            print(nameAwaySelected)
         }
         
     }
