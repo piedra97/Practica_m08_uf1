@@ -10,8 +10,21 @@ import UIKit
 
 class DetailTeamViewController: UIViewController {
 
+    @IBOutlet weak var logoToDisplay: UIImageView!
+    @IBOutlet weak var nameToDisplay: UILabel!
+    @IBOutlet weak var cityToDisplay: UILabel!
+    @IBOutlet weak var conferenceToDisplay: UILabel!
+    var teamToWork: Team?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let currentTeam = teamToWork {
+            logoToDisplay.image = UIImage(named: currentTeam.logo)
+            nameToDisplay.text = currentTeam.teamName
+            cityToDisplay.text = currentTeam.city
+            conferenceToDisplay.text = currentTeam.conference
+        }
 
         // Do any additional setup after loading the view.
     }

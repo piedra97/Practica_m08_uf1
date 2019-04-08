@@ -70,6 +70,73 @@
             </objects>
             <point key="canvasLocation" x="-1729" y="161"/>
         </scene>
+        <!--Equipos-->
+        <scene sceneID="SjI-Kl-Jh9">
+            <objects>
+                <viewController id="XeX-fz-kYl" customClass="ListOfTeamsViewController" customModule="Practica_01_UF01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MEG-PI-7hx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bXy-6f-T2j">
+                                <rect key="frame" x="0.0" y="88" width="414" height="742"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cJ6-9p-X1K">
+                                    <size key="itemSize" width="181" height="201"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Klr-da-MHk" customClass="CollectionViewCell" customModule="Practica_01_UF01" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="201"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="201"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2yS-ai-9YZ">
+                                                    <rect key="frame" x="4" y="20" width="172" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fK-G5-AwW">
+                                                    <rect key="frame" x="0.0" y="156" width="176" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="teamLogo" destination="2yS-ai-9YZ" id="fig-Ep-fER"/>
+                                            <outlet property="teamName" destination="1fK-G5-AwW" id="tn2-Jf-seL"/>
+                                            <segue destination="rwb-Jx-r0v" kind="showDetail" identifier="Team Detail Segue" id="Rbt-aE-L2B"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JBa-BR-Kdo"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Equipos" id="pLE-xt-ESC">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="WAx-HL-dL7">
+                            <connections>
+                                <segue destination="bMv-hF-che" kind="unwind" unwindAction="goBackWithSegue:" id="xiM-3o-dOl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="bXy-6f-T2j" id="V1S-Lh-Iaf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HOl-Iz-ofr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bMv-hF-che" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1049.2753623188407" y="-125.22321428571428"/>
+        </scene>
         <!--Detail Team View Controller-->
         <scene sceneID="nMe-K8-KQi">
             <objects>
@@ -83,76 +150,62 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="hF8-xY-xkH">
+                                <rect key="frame" x="132" y="258.5" width="150" height="379.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JkG-kv-E6s">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="I3b-vT-YjY"/>
+                                            <constraint firstAttribute="height" constant="150" id="SR8-FW-Chg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvE-JU-wqe">
+                                        <rect key="frame" x="44.5" y="206" width="61.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ciudad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPC-QR-6ld">
+                                        <rect key="frame" x="48" y="282.5" width="54.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conferencia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMx-ca-sEd">
+                                        <rect key="frame" x="29" y="359" width="92.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hF8-xY-xkH" firstAttribute="centerX" secondItem="RyZ-hB-vqt" secondAttribute="centerX" id="Ksi-eC-yOU"/>
+                            <constraint firstItem="hF8-xY-xkH" firstAttribute="centerY" secondItem="RyZ-hB-vqt" secondAttribute="centerY" id="Rdt-Dn-tzN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QAd-a9-Jcp"/>
                     </view>
+                    <connections>
+                        <outlet property="cityToDisplay" destination="yPC-QR-6ld" id="fpO-aC-yvT"/>
+                        <outlet property="conferenceToDisplay" destination="oMx-ca-sEd" id="T5F-sa-Xja"/>
+                        <outlet property="logoToDisplay" destination="JkG-kv-E6s" id="0tj-wy-ubU"/>
+                        <outlet property="nameToDisplay" destination="XvE-JU-wqe" id="RyA-9Q-CI8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuw-zr-gtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="509"/>
-        </scene>
-        <!--Equipos-->
-        <scene sceneID="TxY-wU-GPL">
-            <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="gLP-xb-XBs" customClass="ListOfTeamsTableViewController" customModule="Practica_01_UF01" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j8T-yh-oW8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gb8-CU-KAv">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gb8-CU-KAv" id="b92-fa-AL6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="gLP-xb-XBs" id="Lwo-1l-qmf"/>
-                            <outlet property="delegate" destination="gLP-xb-XBs" id="ttJ-bW-p3n"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Equipos" id="q0f-1D-Hch">
-                        <barButtonItem key="backBarButtonItem" title="Menu" id="9RB-ik-3rc"/>
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="hAc-HK-e7b">
-                            <connections>
-                                <action selector="goBack:" destination="0sp-UL-cTx" id="g77-TX-5Of"/>
-                                <segue destination="0sp-UL-cTx" kind="unwind" identifier="Go to Menu in DTWC" unwindAction="goBackWithSegue:" id="2CL-On-qTg"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HAa-8e-Iu2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="0sp-UL-cTx" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="890" y="-171"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="M7V-c3-fC6">
-            <objects>
-                <navigationController id="xZs-C2-lS6" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YSi-i7-P32">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="gLP-xb-XBs" kind="relationship" relationship="rootViewController" id="1C1-tZ-RVJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tVR-gJ-q9P" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="20" y="-171"/>
+            <point key="canvasLocation" x="162" y="538"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="xNw-Nb-173">
             <objects>
                 <splitViewController id="f0y-jv-Rxn" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="xZs-C2-lS6" kind="relationship" relationship="masterViewController" id="Dc8-pJ-cEv"/>
                         <segue destination="rwb-Jx-r0v" kind="relationship" relationship="detailViewController" id="SnN-jH-Ph7"/>
+                        <segue destination="eV4-0e-h44" kind="relationship" relationship="masterViewController" id="xNw-bI-7dA"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiu-uf-H52" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,11 +454,30 @@
             </objects>
             <point key="canvasLocation" x="945" y="1162"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GfT-Uo-YD8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eV4-0e-h44" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ksK-cP-Sj4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XeX-fz-kYl" kind="relationship" relationship="rootViewController" id="ZxL-nS-cmj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="joJ-Lh-h2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35" y="-173"/>
+        </scene>
     </scenes>
     <resources>
         <image name="gl_nbacourts_04.png" width="1024" height="576"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="VdI-Rh-NwC"/>
+        <segue reference="Rbt-aE-L2B"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0009BDE2225B464E009A9103 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0009BDE1225B464E009A9103 /* CollectionViewCell.swift */; };
 		00EC0912225899C200AC6BF7 /* MatchItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EC0911225899C200AC6BF7 /* MatchItem.swift */; };
 		EF2B2E31224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E30224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift */; };
 		EF2B2E33224D0FC900DC32CF /* DetailMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2B2E32224D0FC900DC32CF /* DetailMatchViewController.swift */; };
@@ -25,7 +26,7 @@
 		EF2B2E6E224D305500DC32CF /* magic.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E50224D305200DC32CF /* magic.png */; };
 		EF2B2E6F224D305500DC32CF /* bucks.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E51224D305200DC32CF /* bucks.png */; };
 		EF2B2E70224D305500DC32CF /* rockets.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E52224D305200DC32CF /* rockets.png */; };
-		EF2B2E71224D305500DC32CF /* denver.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E53224D305200DC32CF /* denver.png */; };
+		EF2B2E71224D305500DC32CF /* nuggets.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E53224D305200DC32CF /* nuggets.png */; };
 		EF2B2E72224D305500DC32CF /* jazz.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E54224D305200DC32CF /* jazz.png */; };
 		EF2B2E73224D305500DC32CF /* kings.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E55224D305200DC32CF /* kings.png */; };
 		EF2B2E74224D305500DC32CF /* timberwolves.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2B2E56224D305300DC32CF /* timberwolves.png */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0009BDE1225B464E009A9103 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		00EC0911225899C200AC6BF7 /* MatchItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchItem.swift; sourceTree = "<group>"; };
 		EF2B2E30224D0F9A00DC32CF /* ListOfMatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMatchesTableViewController.swift; sourceTree = "<group>"; };
 		EF2B2E32224D0FC900DC32CF /* DetailMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMatchViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +94,7 @@
 		EF2B2E50224D305200DC32CF /* magic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magic.png; sourceTree = "<group>"; };
 		EF2B2E51224D305200DC32CF /* bucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bucks.png; sourceTree = "<group>"; };
 		EF2B2E52224D305200DC32CF /* rockets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rockets.png; sourceTree = "<group>"; };
-		EF2B2E53224D305200DC32CF /* denver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = denver.png; sourceTree = "<group>"; };
+		EF2B2E53224D305200DC32CF /* nuggets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nuggets.png; sourceTree = "<group>"; };
 		EF2B2E54224D305200DC32CF /* jazz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jazz.png; sourceTree = "<group>"; };
 		EF2B2E55224D305200DC32CF /* kings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kings.png; sourceTree = "<group>"; };
 		EF2B2E56224D305300DC32CF /* timberwolves.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timberwolves.png; sourceTree = "<group>"; };
@@ -159,7 +161,7 @@
 				EF2B2E5E224D305400DC32CF /* cavs.png */,
 				EF2B2E5C224D305300DC32CF /* celtics.png */,
 				EF2B2E4C224D305100DC32CF /* clippers.png */,
-				EF2B2E53224D305200DC32CF /* denver.png */,
+				EF2B2E53224D305200DC32CF /* nuggets.png */,
 				EF2B2E66224D305500DC32CF /* grizzlies.png */,
 				EF2B2E5F224D305400DC32CF /* hawks.png */,
 				EF2B2E61224D305400DC32CF /* heat.png */,
@@ -255,6 +257,7 @@
 				EF43DA3422564770004CA8E5 /* MenuViewController.swift */,
 				EF43DA36225647A0004CA8E5 /* EditMatchViewController.swift */,
 				00EC0911225899C200AC6BF7 /* MatchItem.swift */,
+				0009BDE1225B464E009A9103 /* CollectionViewCell.swift */,
 			);
 			path = "Practica-01-UF01";
 			sourceTree = "<group>";
@@ -340,7 +343,7 @@
 				EF2B2E85224D305500DC32CF /* mavericks.png in Resources */,
 				EF2B2E6B224D305500DC32CF /* 76ers.png in Resources */,
 				EF2B2E7A224D305500DC32CF /* celtics.png in Resources */,
-				EF2B2E71224D305500DC32CF /* denver.png in Resources */,
+				EF2B2E71224D305500DC32CF /* nuggets.png in Resources */,
 				EF2B2E7E224D305500DC32CF /* knicks.png in Resources */,
 				EF2B2E7C224D305500DC32CF /* cavs.png in Resources */,
 				EF2B2E7F224D305500DC32CF /* heat.png in Resources */,
@@ -381,6 +384,7 @@
 				EFCDA82F225268EE0071FF15 /* TeamManager.swift in Sources */,
 				EF2B2E47224D28C500DC32CF /* FMDatabaseQueue.m in Sources */,
 				EF2B2E43224D28C500DC32CF /* FMDatabaseAdditions.m in Sources */,
+				0009BDE2225B464E009A9103 /* CollectionViewCell.swift in Sources */,
 				EF6BA7072243EB7F00B51A73 /* AppDelegate.swift in Sources */,
 				EFCDA824225258FA0071FF15 /* MatchManager.swift in Sources */,
 				EFCDA81E225253C20071FF15 /* Match.swift in Sources */,
