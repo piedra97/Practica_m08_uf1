@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NMd-G9-pRk">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Menu View Controller-->
+        <!--Practica-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MenuViewController" customModule="Practica_01_UF01" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gl_nbacourts_04.png" translatesAutoresizingMaskIntoConstraints="NO" id="gOv-O5-da0">
-                                <rect key="frame" x="16" y="60" width="382" height="299.5"/>
+                                <rect key="frame" x="16" y="104" width="382" height="255.5"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,6 +60,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Practica" id="HOK-dI-zyI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="Hsf-Tc-V74">
@@ -68,7 +69,7 @@
                     <viewLayoutGuide key="safeArea" id="rAo-VA-ZJ1"/>
                 </stackView>
             </objects>
-            <point key="canvasLocation" x="-1729" y="161"/>
+            <point key="canvasLocation" x="-820.28985507246387" y="160.71428571428569"/>
         </scene>
         <!--Equipos-->
         <scene sceneID="SjI-Kl-Jh9">
@@ -112,7 +113,7 @@
                                         <connections>
                                             <outlet property="teamLogo" destination="2yS-ai-9YZ" id="fig-Ep-fER"/>
                                             <outlet property="teamName" destination="1fK-G5-AwW" id="tn2-Jf-seL"/>
-                                            <segue destination="rwb-Jx-r0v" kind="showDetail" identifier="Team Detail Segue" id="Rbt-aE-L2B"/>
+                                            <segue destination="Pay-ww-7cP" kind="showDetail" identifier="Team Detail Segue" id="Rbt-aE-L2B"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -122,9 +123,9 @@
                         <viewLayoutGuide key="safeArea" id="JBa-BR-Kdo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Equipos" id="pLE-xt-ESC">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="WAx-HL-dL7">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="rIe-Qm-jVn">
                             <connections>
-                                <segue destination="bMv-hF-che" kind="unwind" unwindAction="goBackWithSegue:" id="xiM-3o-dOl"/>
+                                <segue destination="bMv-hF-che" kind="unwind" unwindAction="goBackWithSegue:" id="TSL-6k-zdB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -135,7 +136,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOl-Iz-ofr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bMv-hF-che" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1049.2753623188407" y="-125.22321428571428"/>
+            <point key="canvasLocation" x="1952.1739130434785" y="-209.59821428571428"/>
         </scene>
         <!--Detail Team View Controller-->
         <scene sceneID="nMe-K8-KQi">
@@ -183,6 +184,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QAd-a9-Jcp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YT7-2p-W2f"/>
                     <connections>
                         <outlet property="cityToDisplay" destination="yPC-QR-6ld" id="fpO-aC-yvT"/>
                         <outlet property="conferenceToDisplay" destination="oMx-ca-sEd" id="T5F-sa-Xja"/>
@@ -192,20 +194,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iuw-zr-gtB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="475"/>
+            <point key="canvasLocation" x="2213.04347826087" y="604.6875"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="xNw-Nb-173">
             <objects>
                 <splitViewController id="f0y-jv-Rxn" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="rwb-Jx-r0v" kind="relationship" relationship="detailViewController" id="SnN-jH-Ph7"/>
+                        <segue destination="Pay-ww-7cP" kind="relationship" relationship="detailViewController" id="SnN-jH-Ph7"/>
                         <segue destination="eV4-0e-h44" kind="relationship" relationship="masterViewController" id="xNw-bI-7dA"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tiu-uf-H52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-914" y="161"/>
+            <point key="canvasLocation" x="-4.3478260869565224" y="160.71428571428569"/>
         </scene>
         <!--Detail Match View Controller-->
         <scene sceneID="lGC-Ju-SJQ">
@@ -269,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e3G-As-GBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-892.75362318840587" y="1870.9821428571427"/>
+            <point key="canvasLocation" x="-1307" y="2259"/>
         </scene>
         <!--Partidos-->
         <scene sceneID="WoF-Bi-dOu">
@@ -316,7 +318,7 @@
                     <navigationItem key="navigationItem" title="Partidos" id="mfP-p5-940">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="fa8-y0-EdL">
                             <connections>
-                                <segue destination="CvM-oN-k3U" kind="unwind" unwindAction="goBackWithSegue:" id="wAV-ZT-wlF"/>
+                                <segue destination="CvM-oN-k3U" kind="unwind" unwindAction="goBackWithSegue:" id="B6i-FV-Uhi"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uOn-XD-JYM">
@@ -349,7 +351,7 @@
                                         <rect key="frame" x="147.5" y="234" width="25" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eo5-8a-952">
                                         <rect key="frame" x="149.5" y="282" width="21.5" height="20.5"/>
@@ -364,7 +366,7 @@
                                         <rect key="frame" x="147.5" y="554.5" width="25" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -400,7 +402,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg8-1H-pnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cp6-1z-JR4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1921.7391304347827" y="1163.1696428571429"/>
+            <point key="canvasLocation" x="2831.8840579710145" y="1163.1696428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hjU-iY-z5M">
@@ -447,7 +449,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MfJ-aq-EF5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945" y="1162"/>
+            <point key="canvasLocation" x="1855.072463768116" y="1161.8303571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GfT-Uo-YD8">
@@ -465,14 +467,50 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joJ-Lh-h2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-35" y="-173"/>
+            <point key="canvasLocation" x="873.91304347826099" y="-173.4375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tet-Ph-Eto">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pay-ww-7cP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yfH-4G-OUG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rwb-Jx-r0v" kind="relationship" relationship="rootViewController" id="Mqi-bR-Hhe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C7P-Gc-lcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1363.768115942029" y="499.55357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LhV-cf-PyQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NMd-G9-pRk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BSM-mG-5Uc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YsR-Xu-E2O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XgL-Zl-Him" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1730.4347826086957" y="160.71428571428569"/>
         </scene>
     </scenes>
     <resources>
         <image name="gl_nbacourts_04.png" width="1024" height="576"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VdI-Rh-NwC"/>
         <segue reference="Rbt-aE-L2B"/>
+        <segue reference="6aU-Z5-kFz"/>
     </inferredMetricsTieBreakers>
 </document>

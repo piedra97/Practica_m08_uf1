@@ -53,7 +53,7 @@ class MenuViewController: UIViewController {
     */
     
     @IBAction func goBack(segue : UIStoryboardSegue) {
-        
+        print("1")
     }
 
 }

@@ -16,7 +16,7 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var pickerLocalData: [String] = [String]()
     var pickerAwayData: [String] = [String]()
     var nameLocalSelected:String = " "
-    var nameAwaySelected:String = " "
+    var nameAwaySelected:String = String()
     
     @IBOutlet weak var saveButtonBar: UIBarButtonItem!
     
@@ -42,6 +42,7 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         scoreLocalTextField.delegate = self
         scoreAwayLocalTextField.delegate = self
+    
         
         if database.open() {
         let teams = teamManager.readRecords(database)
@@ -64,9 +65,11 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if !scoreLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty && !nameLocalSelected.isEmpty && !nameAwaySelected.isEmpty{
+        if !scoreLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty && !nameLocalSelected.isEmpty && !nameAwaySelected.isEmpty && scoreLocalTextField != scoreAwayLocalTextField && nameLocalSelected != nameAwaySelected {
             self.saveButtonBar.isEnabled = true
             
+        }else if scoreLocalTextField == scoreAwayLocalTextField {
+            saveButtonBar.isEnabled = false
         }
     }
     
@@ -110,6 +113,12 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }else if pickerView.tag == 2 {
             nameAwaySelected = pickerAwayData[row] as String
             print(nameAwaySelected)
+        }
+        
+        if nameLocalSelected == nameAwaySelected {
+            saveButtonBar.isEnabled = false
+        }else if nameAwaySelected != nameLocalSelected && scoreAwayLocalTextField.text!.isEmpty || !scoreLocalTextField.text!.isEmpty{
+            saveButtonBar.isEnabled = true
         }
         
     }
