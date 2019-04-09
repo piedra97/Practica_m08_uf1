@@ -267,11 +267,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Partidos" id="mfP-p5-940">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="fa8-y0-EdL">
-                            <connections>
-                                <segue destination="CvM-oN-k3U" kind="unwind" unwindAction="goBackWithSegue:" id="B6i-FV-Uhi"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="uOn-XD-JYM">
                             <connections>
                                 <segue destination="bly-aR-LmX" kind="presentation" identifier="Segue To Insert Match" id="Vsw-FT-Twj"/>
@@ -280,7 +275,6 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZK-u0-LAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="CvM-oN-k3U" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="20" y="1162"/>
         </scene>
@@ -431,7 +425,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6aU-Z5-kFz"/>
+        <segue reference="VdI-Rh-NwC"/>
         <segue reference="6Yx-u0-75N"/>
     </inferredMetricsTieBreakers>
 </document>

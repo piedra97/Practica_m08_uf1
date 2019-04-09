@@ -117,7 +117,8 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         if nameLocalSelected == nameAwaySelected || scoreAwayLocalTextField.text == scoreLocalTextField.text{
             saveButtonBar.isEnabled = false
-        }else if nameAwaySelected != nameLocalSelected && !nameAwaySelected.isEmpty && !nameLocalSelected.isEmpty && !scoreAwayLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty && scoreAwayLocalTextField != scoreLocalTextField{
+            
+        }else if nameAwaySelected != nameLocalSelected && !nameAwaySelected.isEmpty && !nameLocalSelected.isEmpty && !scoreAwayLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty && scoreAwayLocalTextField.text != scoreLocalTextField.text {
             saveButtonBar.isEnabled = true
         }
         
@@ -130,10 +131,10 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
-        if scoreAwayLocalTextField.text == scoreLocalTextField.text {
+        if scoreAwayLocalTextField.text == scoreLocalTextField.text || nameAwaySelected == nameLocalSelected{
             saveButtonBar.isEnabled = false
         }
-        else if !scoreAwayLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty{
+        else if !scoreAwayLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty && nameAwaySelected != nameLocalSelected && !nameAwaySelected.isEmpty && !nameLocalSelected.isEmpty && scoreAwayLocalTextField.text != scoreLocalTextField.text{
             saveButtonBar.isEnabled = true
         }
     }
