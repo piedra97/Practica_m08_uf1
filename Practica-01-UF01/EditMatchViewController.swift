@@ -68,7 +68,7 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if !scoreLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty && !nameLocalSelected.isEmpty && !nameAwaySelected.isEmpty && scoreLocalTextField != scoreAwayLocalTextField && nameLocalSelected != nameAwaySelected {
             self.saveButtonBar.isEnabled = true
             
-        }else if scoreLocalTextField == scoreAwayLocalTextField {
+        }else if scoreLocalTextField == scoreAwayLocalTextField && nameLocalSelected == nameAwaySelected{
             saveButtonBar.isEnabled = false
         }
     }
