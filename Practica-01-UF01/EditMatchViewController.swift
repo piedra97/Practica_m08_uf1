@@ -115,17 +115,27 @@ class EditMatchViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             print(nameAwaySelected)
         }
         
-        if nameLocalSelected == nameAwaySelected {
+        if nameLocalSelected == nameAwaySelected || scoreAwayLocalTextField.text == scoreLocalTextField.text{
             saveButtonBar.isEnabled = false
-        }else if nameAwaySelected != nameLocalSelected && scoreAwayLocalTextField.text!.isEmpty || !scoreLocalTextField.text!.isEmpty{
+        }else if nameAwaySelected != nameLocalSelected && !nameAwaySelected.isEmpty && !nameLocalSelected.isEmpty && !scoreAwayLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty && scoreAwayLocalTextField != scoreLocalTextField{
             saveButtonBar.isEnabled = true
         }
         
     }
     
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        if scoreAwayLocalTextField.text == scoreLocalTextField.text {
+            saveButtonBar.isEnabled = false
+        }
+        else if !scoreAwayLocalTextField.text!.isEmpty && !scoreLocalTextField.text!.isEmpty{
+            saveButtonBar.isEnabled = true
+        }
     }
     
 
